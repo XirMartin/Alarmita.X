@@ -3,7 +3,8 @@
 
 #define     Porton      IO_RC0_PORT
 #define     Puerta      IO_RC1_PORT
-#define     Sirena      IO_RB7_LAT
+#define     Beacon      IO_RB7_LAT
+#define     Sirena      IO_RC7_LAT
 
 
 void main(void)
@@ -35,7 +36,7 @@ void main(void)
             Sirena = 0;
         }
             
-        
+//        Beacon = Puerta;
         
         // Add your application code
     }
