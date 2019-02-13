@@ -3,8 +3,9 @@
 
 #define     Porton      IO_RC0_PORT
 #define     Puerta      IO_RC1_PORT
-#define     Beacon      IO_RB7_LAT
+#define     Baliza      IO_RB7_LAT
 #define     Sirena      IO_RC7_LAT
+
 
 
 void main(void)
@@ -16,10 +17,10 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
@@ -35,9 +36,7 @@ void main(void)
             __delay_ms(3000);
             Sirena = 0;
         }
-            
-//        Beacon = Puerta;
-        
-        // Add your application code
+        Baliza = Fb;
     }
 }
+
